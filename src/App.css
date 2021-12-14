@@ -28,3 +28,7 @@ a {
   padding: 6px;
   color: #204963;
 }
+
+input {
+  margin: 5px;
+}
