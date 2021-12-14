@@ -15,7 +15,7 @@ function App() {
                     <Link to="/logout">Logout</Link>
                 </li>
                 <li>
-                    {isLoggedIn && <Link to="/friendslist">Friends List</Link>}
+                    {isLoggedIn && <Link to="/friends">Friends List</Link>}
                 </li>
                 <div>
                     {isLoggedIn && <p>Nice to meet you {localStorage.getItem('username')} </p>}

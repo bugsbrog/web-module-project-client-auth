@@ -65,7 +65,7 @@ Each friend object has the format:
 * [ ] In `App.js`, create a navigation bar that allows the user to redirect to logout, friendslist or add friend.
 
 #### Build the PrivateRoute component
-* [ ] Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
+* [X] Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
 * [ ] Use your protected route to restrict access to your `/friends` and `/friends/add` routes.
 
 ### Task 3: Stretch goals
