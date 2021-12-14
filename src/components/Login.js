@@ -4,8 +4,8 @@ import axios from 'axios';
 class Login extends React.Component {
     state = {
         credentials: {
-            username: '',
-            password: ''
+            username: 'Bloom',
+            password: 'Tech'
         }
     };
 
@@ -19,13 +19,14 @@ class Login extends React.Component {
     };
 
     login = e => {
+        e.preventDefault();
         axios.post('http://localhost:9000/api/login', this.state.credentials)
             .then(res => {
                 const { token, role, username } = res.data;
                 localStorage.setItem("token", token);
                 localStorage.setItem("role", role);
                 localStorage.setItem("username", username);
-                this.props.history.push('/friends');
+                window.location.href="/friends"
             })
             .catch(err => {
                 console.error(err);

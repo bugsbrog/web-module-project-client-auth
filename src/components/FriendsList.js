@@ -20,6 +20,22 @@ class FriendsList extends React.Component {
                 console.error(err);
             })
         }
+
+        render() {
+        console.log(this.state.friends)
+            return (
+                <div>
+                    {
+                        this.state.friends.map(friend => (
+                                <div key={friend.id}>
+                                    {friend.name}
+                                </div>
+                            )
+                        )
+                    }
+                </div>
+            )
+        }
     }
 
     export default FriendsList;
