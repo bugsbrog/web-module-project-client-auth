@@ -2,9 +2,16 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
+//PrivateRoute
+import PrivateRoute from './components/PrivateRoute';
+
+//Components
+import Login from './components/Login';
+import Logout from './components/Logout'
+
 function App() {
     const isLoggedIn = localStorage.getItem("token")
-  return (
+    return (
       <Router>
         <div className="App">
             <ul>
@@ -12,7 +19,7 @@ function App() {
                     <Link to="/login">Login</Link>
                 </li>
                 <li>
-                    <Link to="/logout">Logout</Link>
+                    <Link to={"/logout"}>Logout</Link>
                 </li>
                 <li>
                     {isLoggedIn && <Link to="/friends">Friends List</Link>}
@@ -22,7 +29,10 @@ function App() {
                 </div>
             </ul>
             <Switch>
-
+                <PrivateRoute exact path={"/friends"} component={} />
+                <PrivateRoute path={"/logout"} component={Logout} />
+                <Route path={"/login"} component={Login} />
+                <Route path={"/"} component={Login} />
             </Switch>
         </div>
       </Router>
