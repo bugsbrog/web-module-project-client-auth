@@ -30,7 +30,7 @@ Each friend object has the format:
 ```
 
 
-***Make sure to complete your tasks one at a time and complete test each task before proceding forward.***
+***Make sure to complete your tasks one at a time and complete test each task before proceeding forward.***
 
 ## Instructions
 ### Task 1: Project Set Up
@@ -44,7 +44,7 @@ Each friend object has the format:
 #### Build the login component
 * [X] Use the [mockup provided](./login_mockup.png) to build out a simple login component.
 * [X] In `App.js`, add a route to allow this component to be displayed when navigating to `/` or `/login`
-* [ ] When submitting your login form, save the token returned to localStorage and redirect to the FriendsList route.
+* [X] When submitting your login form, save the token returned to localStorage and redirect to the FriendsList route.
 
 #### Build the friendslist component
 * [ ] Use the [mockup provided](./friendslist_mockup.png) to build out a simple list component made to display all friends.
