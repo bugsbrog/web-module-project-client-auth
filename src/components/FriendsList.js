@@ -1,7 +1,7 @@
 import React from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
-class Friends extends React.Component {
+class FriendsList extends React.Component {
     state = {
         friends: []
     };
@@ -21,3 +21,5 @@ class Friends extends React.Component {
             })
         }
     }
+
+    export default FriendsList;

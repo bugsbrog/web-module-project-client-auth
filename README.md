@@ -1,4 +1,4 @@
-# Client Auth Module Project: Auth Friends
+# Client Auth Module Project: Auth FriendsList
 
 This module explored the clients-side authentication using auth-tokens. During the module you studied how the login, request and logout process works when using authentication and how to restrict access to certain route to logged in users. IN this project, you will practice each of these skills.
 
@@ -8,7 +8,7 @@ This module explored the clients-side authentication using auth-tokens. During t
 - Use an auth token to make requests.
 
 ## Introduction
-In this project, you will connect to a local server with endpoints allowing you to work with interact with data from the cast of Friends. Using this data as a 
+In this project, you will connect to a local server with endpoints allowing you to work with interact with data from the cast of FriendsList. Using this data as a 
 base, you will build functioning login, display and add component pages to your application.
 
 The included API holds a list of friends and lets you add, edit, or remove friends from that list. All of the API endpoints (except the login endpoint) are considered "protected", meaning you have to make the request with an authentication token in the header or the API will send back a `401` error. Take a look at the endpoints that our API has to offer in `server.js`.

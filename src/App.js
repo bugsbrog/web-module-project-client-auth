@@ -7,7 +7,8 @@ import PrivateRoute from './components/PrivateRoute';
 
 //Components
 import Login from './components/Login';
-import Logout from './components/Logout'
+import Logout from './components/Logout';
+import FriendsList from './components/FriendsList';
 
 function App() {
     const isLoggedIn = localStorage.getItem("token")
@@ -29,7 +30,7 @@ function App() {
                 </div>
             </ul>
             <Switch>
-                <PrivateRoute exact path={"/friends"} component={} />
+                <PrivateRoute exact path={"/friends"} component={FriendsList} />
                 <PrivateRoute path={"/logout"} component={Logout} />
                 <Route path={"/login"} component={Login} />
                 <Route path={"/"} component={Login} />
