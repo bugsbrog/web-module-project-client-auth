@@ -38,6 +38,7 @@ class AddFriends extends React.Component {
                         name="name"
                         value={this.state.name}
                         onChange={this.handleChange}
+                        placeholder="Enter a name"
                         />
                         <label>Age:</label>
                         <input
@@ -45,6 +46,7 @@ class AddFriends extends React.Component {
                             name="age"
                             value={this.state.age}
                             onChange={this.handleChange}
+                            placeholder="Enter an age"
                             />
                             <label>Email:</label>
                     <input
@@ -52,6 +54,7 @@ class AddFriends extends React.Component {
                         name="email"
                         value={this.state.email}
                         onChange={this.handleChange}
+                        placeholder="Enter an email"
                         />
                     <button>Add Friend</button>
                 </form>

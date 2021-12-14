@@ -10,6 +10,7 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import FriendsList from './components/FriendsList';
 import AddFriends from './components/AddFriends';
+import HomePage from './components/HomePage';
 
 function App() {
     const isLoggedIn = localStorage.getItem("token")
@@ -18,16 +19,19 @@ function App() {
         <div className="App">
             <ul>
                 <li>
-                    <Link to="/login">Login</Link>
+                    <Link to={"/"}>Home</Link>
                 </li>
                 <li>
-                    <Link to={"/logout"}>Logout</Link>
+                    {!isLoggedIn && <Link to={"/login"}>Login</Link>}
                 </li>
                 <li>
-                    {isLoggedIn && <Link to="/friends">Friends List</Link>}
+                    {isLoggedIn && <Link to={"/logout"}>Logout</Link>}
                 </li>
                 <li>
-                    <Link to={"/friends/add"}>Add a Friend</Link>
+                    {isLoggedIn && <Link to={"/friends"}>Friends List</Link>}
+                </li>
+                <li>
+                    {isLoggedIn && <Link to={"/friends/add"}>Add a Friend</Link>}
                 </li>
                 <div>
                     {isLoggedIn && <p>Nice to meet you {localStorage.getItem('username')} </p>}
@@ -38,6 +42,7 @@ function App() {
                 <PrivateRoute path={"/logout"} component={Logout} />
                 <Route path={"/login"} component={Login} />
                 <PrivateRoute exact path={"/friends/add"} component={AddFriends} />
+                <Route exact path={"/"} component={HomePage} />
             </Switch>
         </div>
       </Router>
